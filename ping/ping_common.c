@@ -46,7 +46,7 @@ static uid_t euid;
 void usage(void)
 {
 	fprintf(stderr, _(
-		"\nUsage\n"
+		"\nUsage(JRX)\n"
 		"  ping [options] <destination>\n"
 		"\nOptions:\n"
 		"  <destination>      DNS name or IP address\n"
