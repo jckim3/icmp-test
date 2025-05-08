@@ -68,6 +68,7 @@ int main() {
         perror("recvfrom");
     } else {
         struct iphdr *ip = (struct iphdr *)recv_buf;
+        //recv_buf의 시작 주소에 IP 헤더 길이만큼 더하면, 바로 뒤에 오는 ICMP 헤더의 시작 위치가 됩니다.
         struct icmphdr *icmp_resp = (struct icmphdr *)(recv_buf + (ip->ihl << 2));
 
         if (icmp_resp->type == ICMP_ECHOREPLY)
